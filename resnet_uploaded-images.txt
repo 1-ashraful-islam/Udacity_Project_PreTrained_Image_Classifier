@@ -1,0 +1,76 @@
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = resnet 
+ dogfile = dognames.txt
+
+Pet Image Label Dictionary has 4 key-value pairs.
+Below are 4 of them:
+ 1 key:                 tea_cup_01.jpg  label:                    tea cup
+ 2 key:                    fish_01.jpg  label:                       fish
+ 3 key:          Siberian_Husky_01.jpg  label:             siberian husky
+ 4 key:          Siberian_Husky_02.jpg  label:             siberian husky
+
+     MATCH:
+
+                   fish_01.jpg: 
+Real:                       fish   Classifier:    goldfish, carassius auratus
+
+ NOT A MATCH:
+
+                tea_cup_01.jpg: 
+Real:                    tea cup   Classifier:                            cup
+
+         Siberian_Husky_01.jpg: 
+Real:             siberian husky   Classifier:              eskimo dog, husky
+
+         Siberian_Husky_02.jpg: 
+Real:             siberian husky   Classifier:              eskimo dog, husky
+
+# Total Images 4 # Matches: 1 # NOT Matches: 3
+
+     MATCH:
+
+                   fish_01.jpg: 
+Real:                       fish   Classifier:    goldfish, carassius auratus  
+PetLabelDog: 0  ClassLabelDog: 0
+
+ NOT A MATCH:
+
+                tea_cup_01.jpg: 
+Real:                    tea cup   Classifier:                            cup  
+PetLabelDog: 0  ClassLabelDog: 0
+
+         Siberian_Husky_01.jpg: 
+Real:             siberian husky   Classifier:              eskimo dog, husky  
+PetLabelDog: 1  ClassLabelDog: 1
+
+         Siberian_Husky_02.jpg: 
+Real:             siberian husky   Classifier:              eskimo dog, husky  
+PetLabelDog: 1  ClassLabelDog: 1
+
+# Total Images 4 # Matches: 1 # NOT Matches: 3
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
+
+
+*** Results Summary for CNN Model Architecture RESNET ***
+N Images            :   4
+N Dog Images        :   2
+N Not-Dog Images    :   2
+ 
+pct_match           : 25.00%
+pct_correct_dogs    : 100.00%
+pct_correct_breed   : 0.00%
+pct_correct_notdogs : 100.00%
+
+INCORRECT Dog Breed Assignment:
+Real:             siberian husky   Classifier:              eskimo dog, husky
+Real:             siberian husky   Classifier:              eskimo dog, husky
+
+** Total Elapsed Runtime: 0:0:0
